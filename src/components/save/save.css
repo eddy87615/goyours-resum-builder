@@ -31,3 +31,16 @@
   margin: 0;
   font-weight: bold;
 }
+
+@media screen and (max-width: 999px) {
+  .save-btn {
+    padding: 0.5rem 1rem;
+
+    font-size: 12px;
+  }
+
+  .save-btn svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}

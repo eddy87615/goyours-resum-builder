@@ -1,8 +1,8 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
 
-import { IoLogoInstagram } from "react-icons/io5";
+import { FaInstagram } from "react-icons/fa";
 import { RiFacebookCircleLine } from "react-icons/ri";
-import { IoHomeOutline } from "react-icons/io5";
+import { AiOutlineHome } from "react-icons/ai";
 
 import "./navigation.css";
 import "../../index.css";
@@ -12,16 +12,16 @@ export default function Navigation() {
     <>
       <nav className="nav-wrapper">
         <Link to="/">
-          <img src="/LOGO-03.png" width={200} />
+          <img src="/LOGO-03.png" width={100} />
         </Link>
         <div className="nav-sns-btn-area">
-          <Link>
-            <IoHomeOutline />
+          <Link to="https://www.goyours.tw/" target="_blank">
+            <AiOutlineHome />
           </Link>
-          <Link>
-            <IoLogoInstagram />
+          <Link to="https://www.instagram.com/goyoursjp/" target="_blank">
+            <FaInstagram />
           </Link>
-          <Link>
+          <Link to="https://www.facebook.com/goyoursjp/" target="_blank">
             <RiFacebookCircleLine />
           </Link>
         </div>

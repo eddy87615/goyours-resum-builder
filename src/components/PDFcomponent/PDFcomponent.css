@@ -465,3 +465,9 @@
   font-size: 12px;
   line-height: 1.1rem;
 }
+
+@media screen and (max-width: 999px) {
+  .preview-window {
+    overflow: auto;
+  }
+}

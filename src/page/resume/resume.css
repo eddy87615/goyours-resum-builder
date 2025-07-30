@@ -158,6 +158,13 @@ textarea {
   padding: 10px;
 }
 
+.preview h3 {
+  text-align: center;
+  font-size: 24px;
+
+  margin-bottom: 100px;
+}
+
 .photo-preview {
   position: relative;
   width: 100%;
@@ -193,4 +200,35 @@ textarea {
   line-height: 1;
 
   z-index: 10;
+}
+
+@media screen and (max-width: 999px) {
+  .resume-form {
+    width: 90%;
+  }
+
+  .form-basicinfo-container {
+    flex-direction: column;
+  }
+
+  .form-basicinfo-01 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form-basicinfo-02 {
+    flex-direction: column;
+  }
+
+  .resume-form label {
+    flex-wrap: wrap;
+  }
+
+  .home-title {
+    width: 90%;
+  }
+  .home-intro {
+    width: 90%;
+  }
 }
