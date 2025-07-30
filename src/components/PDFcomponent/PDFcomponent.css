@@ -1,0 +1,467 @@
+.download-btn-wrapper {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.download-btn-wrapper p {
+  font-weight: bold;
+  font-size: 14px;
+}
+.download-btn {
+  background-color: var(--goyoursYellow);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #ffcd4e;
+}
+
+.preview {
+  margin-top: 100px;
+}
+
+.pdf-content {
+  width: 794px; /* A4 寬度 (px) at 96 DPI */
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: black;
+  line-height: 1.4;
+}
+
+.pdf-page {
+  position: relative;
+  width: 794px; /* A4 寬度 (px) at 96 DPI */
+  height: 1123px; /* A4 高度 (px) at 96 DPI */
+  margin-bottom: 20px; /* 頁面間距 */
+  padding: 0; /* 移除內邊距以實現滿版 */
+  background: white;
+  box-sizing: border-box;
+  border: 1px solid #ddd; /* 頁面邊框，預覽時可見 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+}
+
+.resume-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--goyoursYellow);
+  width: 100%;
+  height: 60px;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.resume-header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--goyoursBlack);
+  bottom: 0;
+}
+
+.resume-wrapper {
+  height: calc(100% - 108px); /* 確保內容區域高度合適 */
+  padding: 0 60px 40px 60px; /* 左右和底部保持內邊距，頂部不需要 */
+  box-sizing: border-box;
+}
+
+.resume-header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+
+  letter-spacing: 4px;
+
+  overflow: hidden;
+}
+
+.pdf-page h2 {
+  margin: 0;
+  margin-top: 80px;
+  padding: 0 60px;
+
+  font-size: 20px;
+  text-align: left;
+
+  letter-spacing: 1rem;
+}
+
+.basic-info-section,
+.education-section,
+.experience-section,
+.pr-section,
+.other-info-section,
+.emergency-contact-section {
+  margin-bottom: 20px;
+  page-break-inside: avoid;
+
+  font-size: 12px !important;
+}
+
+.basic-info-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+.pdf-photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 100px;
+}
+
+.pdf-photo {
+  height: 100%;
+  object-fit: cover;
+  /* border: 1px solid #ccc; */
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.label {
+  min-width: 120px;
+  margin-right: 10px;
+}
+
+.value {
+  flex: 1;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+  page-break-inside: avoid;
+  table-layout: fixed;
+  border: 2px solid #666; /* 灰色外框 */
+}
+
+.info-table td {
+  border: 1px solid #666; /* 灰色邊框 */
+  padding: 4px;
+  vertical-align: top;
+  height: 32px; /* 固定行高 */
+  background-color: white; /* 白色背景 */
+
+  vertical-align: middle;
+  font-size: 12px;
+  height: fit-content;
+}
+.info-table td.pr-content-cell {
+  border: none;
+}
+
+.info-table td:first-child {
+  width: 150px;
+  background-color: white; /* 移除底色，改為白色 */
+}
+
+/* 基本資料表格樣式 */
+.basic-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  table-layout: fixed;
+  border: 2px solid #666; /* 灰色外框 */
+}
+
+.basic-info-table td {
+  border: 1px solid #666;
+  padding: 2px 4px;
+  vertical-align: top;
+  height: 32px; /* 固定行高 */
+  background-color: white; /* 白色背景 */
+}
+
+.label-cell {
+  background-color: white; /* 移除底色，改為白色 */
+  width: 120px;
+}
+
+.value-cell {
+  background-color: white;
+}
+
+.pdf-photo-wrapper {
+  width: 100%;
+  height: 150px; /* 照片區域較高 */
+  overflow: hidden;
+}
+
+.photo-cell {
+  background-color: white;
+  text-align: center;
+  width: 32px;
+  height: 150px; /* 照片區域較高 */
+  vertical-align: middle;
+}
+
+/* 名字相關格子 */
+.name-en-cell {
+  background-color: white;
+  text-align: left;
+  height: 20px; /* 英文名字格子較窄 */
+  font-size: 12px;
+  vertical-align: middle;
+  padding-left: 8px;
+}
+
+.name-jp-cell {
+  background-color: white;
+  text-align: left;
+  height: 32px; /* 日文名字格子正常高度 */
+  font-size: 12px;
+  vertical-align: middle;
+  padding-left: 8px;
+}
+
+.empty-cell {
+  background-color: white;
+}
+
+/* 自我PR內容格子 */
+.pr-content-cell {
+  width: 100% !important;
+  background-color: white;
+  text-align: left;
+  vertical-align: top;
+  padding: 10px;
+  white-space: pre-wrap;
+  height: 500px !important;
+  min-height: 500px !important;
+  max-height: 500px !important;
+  overflow: hidden;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  display: block !important;
+  position: relative;
+
+  font-weight: normal !important;
+  font-size: 14px;
+}
+
+/* PR區塊的表格也需要固定高度 */
+.pr-section .info-table {
+  table-layout: fixed !important;
+  height: 500px !important;
+  min-height: 500px !important;
+  max-height: 500px !important;
+  overflow: hidden !important;
+}
+
+.pr-section .info-table tbody {
+  height: 500px !important;
+  display: block !important;
+  overflow: hidden !important;
+}
+
+.pr-section .info-table tr {
+  height: 500px !important;
+  min-height: 500px !important;
+  max-height: 500px !important;
+  display: block !important;
+  overflow: hidden !important;
+}
+
+.pr-section .info-table td {
+  display: block !important;
+  height: 500px !important;
+  overflow: hidden !important;
+}
+
+.licenses-section {
+  margin-top: 100px;
+}
+
+/* 歷史表格樣式 (學歷+打工+職歷合併) */
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+  page-break-inside: avoid;
+  table-layout: fixed;
+  border: 2px solid #666; /* 灰色外框 */
+}
+
+.history-table td {
+  border: 1px solid #666; /* 灰色邊框 */
+  padding: 4px;
+  vertical-align: middle;
+  height: 32px; /* 固定行高 */
+  background-color: white; /* 白色背景 */
+}
+
+/* 表格標題行樣式 */
+.table-header-year {
+  background-color: white;
+  text-align: center;
+  width: 80px;
+  height: 32px;
+  font-size: 12px;
+}
+
+.table-header-month {
+  background-color: white;
+  text-align: center;
+  width: 50px;
+  height: 32px;
+  font-size: 12px;
+}
+
+.table-header-content {
+  background-color: white;
+  text-align: center;
+  height: 32px;
+  font-size: 12px;
+}
+
+/* 區塊標題樣式 */
+.section-header {
+  background-color: white;
+  text-align: center;
+  height: 32px; /* 區塊標題行高 */
+  border-bottom: 2px solid #666 !important; /* 區塊分隔線 */
+}
+
+/* 年份欄位 */
+.year-cell {
+  width: 80px;
+  background-color: white;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* 月份欄位 */
+.month-cell {
+  width: 50px;
+  background-color: white;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* 描述欄位 */
+.description-cell {
+  background-color: white;
+  text-align: left;
+  padding-left: 12px;
+}
+.experience-status {
+  float: right;
+}
+
+.pr-content {
+  border: 1px solid #ccc;
+  padding: 15px;
+  min-height: 100px;
+  background-color: #f8f9fa;
+  white-space: pre-wrap;
+}
+
+@media print {
+  .download-btn {
+    display: none;
+  }
+
+  .pdf-content {
+    margin: 0;
+    padding: 0;
+  }
+
+  .pdf-page {
+    border: none;
+    box-shadow: none;
+    margin-bottom: 0;
+    page-break-after: always;
+  }
+
+  .pdf-page:last-child {
+    page-break-after: auto;
+  }
+}
+
+.name {
+  height: 80px !important;
+  vertical-align: top !important;
+}
+.name:nth-last-of-type(1) {
+  border-right: 1px solid #666;
+}
+
+.spelling {
+  height: 0px !important;
+  padding: 2px 4px !important;
+}
+
+.label-cell.birthday-cell {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.name-filled {
+  display: block;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 24px;
+}
+.sex-filled {
+  display: block;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.address-filled {
+  display: block;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 14px;
+}
+
+.contact-filled {
+  display: block;
+  width: 100%;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.final-sign {
+  font-size: 12px;
+  line-height: 1.1rem;
+}

@@ -1,0 +1,33 @@
+.save-btn {
+  position: fixed;
+  bottom: 4%;
+  right: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+
+  width: fit-content;
+
+  background-color: var(--goyoursYellow);
+  padding: 1rem 2rem;
+
+  border-radius: 50rem;
+  cursor: pointer;
+  transition: opacity 0.3s;
+
+  z-index: 999;
+}
+
+.save-btn:hover {
+  background-color: #ffcd4e;
+}
+.save-btn svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.save-btn p {
+  margin: 0;
+  font-weight: bold;
+}

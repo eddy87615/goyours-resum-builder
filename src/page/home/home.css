@@ -1,0 +1,17 @@
+.home-title {
+  padding-top: 150px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  font-size: clamp(2rem, calc(var(--vw) / 20), 8rem);
+}
+
+.home-intro {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  line-height: 1.5rem;
+  letter-spacing: 0.05rem;
+}

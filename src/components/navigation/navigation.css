@@ -1,0 +1,32 @@
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: fit-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.5rem 1rem;
+
+  background-color: var(--whiteBgColor);
+
+  box-shadow: 1px 1px 5px #e0e0e0;
+
+  z-index: 99999;
+}
+
+.nav-sns-btn-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-sns-btn-area svg {
+  width: 2rem;
+  height: 2rem;
+
+  color: var(--goyoursBlack);
+}
