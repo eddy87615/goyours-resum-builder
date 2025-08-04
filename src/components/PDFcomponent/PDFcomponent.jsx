@@ -481,7 +481,6 @@ export default function PDFComponent() {
                   <br />
                   本人（法定代理人）の署名／履歴書作成年月日
                   <br />
-                  <br />
                   （署名）{emergencyContact.signature}&emsp;西暦&ensp;
                   {emergencyContact.signDate
                     ? new Date(emergencyContact.signDate).getFullYear()
